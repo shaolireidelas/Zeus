@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z.E.U.S</title>
+</head>
+<script type="text/javascript">
+       
+    function validar(){
+      var email = document.getElementById("usuario").value; 
+      var senha = document.getElementById("senha").value; 
+
+      if(email == ''){
+        alert('Digite um email!');
+      }
+      else if(senha == ''){
+        alert('Digite uma senha!');
+      }
+     
+      else { alert('Bem-vindo(a)');
+        window.location.href = "img.html";}
+      }
+  
+  </script>
+<link rel="stylesheet" href="controle.css">
+<body>
+    
+  <form class="form" action="" >
+   <div class="card">
+      <div class="card-top">
+          <img class= "img" src="img/png.png" alt="">
+       <h2>Login</h2>
+       <p>Bem-vindo(a) ao Z.E.U.S</p>
+       <p>Faça login ou cadastre-se!</p>
+      </div>
+      <div class="card-group">
+      <input type="email" placeholder="Digite seu email" id="usuario">
+      </div>
+      <div class="card-group">
+        <input type="password" placeholder="Digite sua senha" id="senha">
+      </div>
+      <div class="card-group">
+        <label> <input type= "checkbox"> Lembre-me</label>
+        <div class="card-group ">
+            <button type="submit"><a onclick="validar();"> Acessar </a></button> 
+            <button ><a href="cadastro.html">Cadastro </a></button> 
+        </div>
+      </div>
+
+
+   </div>
+
+  </form>
+    
+</body>
+</html>

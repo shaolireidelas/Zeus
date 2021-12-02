@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z.E.U.S</title> 
+    <link rel="stylesheet" href="controle.css">
+    <script type="text/javascript">
+      function mascara(i){
+        var v = i.value;
+   
+        if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+          i.value = v.substring(0, v.length-1);
+          return;
+        }
+        i.setAttribute("maxlength", "14");
+        if (v.length == 3 || v.length == 7) i.value += ".";
+        if (v.length == 11) i.value += "-";
+      }
+      function validar(){
+        var email = document.getElementById("email").value;
+        var nome = document.getElementById("nome").value;
+        var senha = document.getElementById("senha").value;
+        var cpf = document.getElementById("cpf").value;
+        var endereco = document.getElementById("endereco").value;
+        var formacao = document.getElementById("funcao").value;
+
+        if(email == ''){
+          alert('Digite um email!');
+        }
+        else if(senha == ''){
+          alert('Digite uma senha!');
+        }
+        else if(nome == ''){
+          alert('Digite um nome!');
+        }
+        else if(cpf == ''){
+          alert('Digite o seu CPF!');
+        }
+        else if(endereco == ''){
+          alert('Digite um endereço!');
+        }
+        else if(funcao == ''){
+          alert('Digite sua funcao!');
+        }
+        else{
+          alert('Usuário criado com sucesso');
+          window.location.href = "controle-de-acesso.html";
+        }
+      }
+    </script>
+</head>
+<body> 
+  <form class="form" action="">
+    <div class="card">
+       <div class="card-top">
+           <img class= "img" src="img/png.png" alt="">
+        <h2>Cadastro</h2>
+        <p>Faça seu cadastro!</p>
+       </div>
+       <div class="card-group">
+        <input type="email" placeholder="Email" id="email"> <br> <br>
+        <input type="password" placeholder="Criar Senha" id="senha"> <br> <br>
+        <input type="text" placeholder="Nome completo" id="nome"> <br> <br>
+        <input type="text" placeholder="CPF" id="cpf" oninput="mascara(this)"> <br> <br>
+        <input type="text" placeholder="Endereço" id="endereco"> <br> <br>
+        <input type="text" placeholder="Função" id="funcao"> <br> <br>
+        <button  type="submit" onclick="validar();"><a>cadastrar</a></button>
+    </div>
+    </form>
+</body>
+</html>

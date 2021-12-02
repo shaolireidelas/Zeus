@@ -1,6 +1,4 @@
 <?php
-    class casa(){^
-    }
     class consumo {
         public $soma;
         

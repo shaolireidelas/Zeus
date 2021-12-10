@@ -30,6 +30,31 @@
             <li><a href="controle-de-acesso.html">Sair</a></li>
     </ul>
    </nav>
-   <p><h2>Em construção</h2></p>
+    <center> Ponto de Ressuprimento</center>
+    
+    <tr><th colspan="5">  PR = CM x TR + ES <br> </th> </tr>
+              
+              <tr>
+        <td>  CM <input id="n1" type="number">  <br> </td>
+        <td>  TR <input id="n2" type="number">  <br> </td>
+        <td>  ES <input id="n3" type="number">  <br> </td>
+        <td>  <button onclick="calcular()">calcular</button> <br> </td>
+        <td>   <span></span> </td>
+    
+               </tr>
+            </table>
+            <script>
+                 var n1 = document.querySelector('#n1')
+                 var n2 = document.querySelector('#n2')
+                 var n3 = document.querySelector('#n3')
+    
+                var resultado = document.querySelector('span')
+    
+                function calcular() {
+    
+                    resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value) + parseInt(n3.value)
+                }
+    
+            </script>
 </body>
 </html>
